@@ -16,7 +16,7 @@ const Student = ({alumnus, toUpdate, toDelete}) => {
     return (
         <Card>
             <Card.Body>
-            <Card.Title>{alumnus.name} </Card.Title>
+            <Card.Title> {alumnus.name} </Card.Title>
             <p> Job Title: {alumnus.position} </p>
             <p> Company: {alumnus.company} </p>
             <p> Current Salary: {alumnus.salary} </p>
