@@ -10,7 +10,11 @@ The Alumni Job Status Tracker is an application designed to showcase the profess
 
 ## Table of Contents
 
-
+- [Built With](#Built-With)
+- [Installation](#installation)
+- [User Flow](#User-Flow)
+- [Contact Information](#Contact-Information)
+- [Acknowledgements](#acknowledgements)
 
 ## Built With 
 
@@ -122,9 +126,5 @@ Note:
 Server runs on http://localhost:8080 and client on http://localhost:5173 
 
 
-
 ## User Flow
 
-## Contact Information
-
-## Acknowledgements
