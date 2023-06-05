@@ -5,12 +5,12 @@ import * as ioicons from 'react-icons/io5'
 
 const Student = ({alumnus, toUpdate, toDelete}) => {
 
-    const onUpdate = (toUpdateStudent) => {
-        toUpdate(toUpdateStudent)
+    const onUpdate = (toUpdateAlumnus) => {
+        toUpdate(toUpdateAlumnus)
     }
 
-    const onDelete = (toDeleteStudent) => {
-        toDelete(toDeleteStudent)
+    const onDelete = (toDeleteAlumnus) => {
+        toDelete(toDeleteAlumnus)
     }
 
     return (
