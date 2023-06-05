@@ -47,7 +47,10 @@ app.post('/api/alumni', async (req, res) => {
 app.put('/api/alumni/:alumnusId', async (req, res) =>{
   const id = parseInt(req.params.alumnusId);
   try {
-
+    await db.query(
+			"UPDATE alumni SET name = $1, position = $2, company = $3, salary = $4, start_date = $5, is_looking = $6, linkedin = $7 WHERE id = $8", 
+			[req.body.name, req.body.position, req.body.company, req.body.salary, req.body.start_date, req.body.is_looking, req.body.linkedin, id]
+		);
 	} catch(e) {
 		return res.status(400).send(String(e));
 	}
