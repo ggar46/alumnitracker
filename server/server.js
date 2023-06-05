@@ -25,7 +25,7 @@ app.get('/api/alumni', async (req, res) => {
 app.post('/api/alumni', async (req, res) => {
   try {
     const result = await db.query(
-      "INSERT INTO alumni(name, position, company, salary, start_date, is_looking, linkedin, is_converted) VALUES($1, $2, $3, $4, $5, $6, $7, $8)",
+      "INSERT INTO alumni(name, position, company, salary, start_date, is_looking, linkedin, is_converted) VALUES($1, $2, $3, $4, $5, $6, $7, $8) RETURNING id",
       [req.body.name, req.body.position, req.body.company, req.body.salary, req.body.start_date, req.body.is_looking, req.body.linkedin, req.body.is_converted],
     );
     const returnObj = {
