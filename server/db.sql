@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 13.3
--- Dumped by pg_dump version 14.2
+-- Dumped from database version 14.6 (Homebrew)
+-- Dumped by pg_dump version 14.6 (Homebrew)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -21,19 +21,25 @@ SET default_tablespace = '';
 SET default_table_access_method = heap;
 
 --
--- Name: students; Type: TABLE; Schema: public; Owner: -
+-- Name: alumni; Type: TABLE; Schema: public; Owner: tpl622_2
 --
 
-CREATE TABLE public.students (
+CREATE TABLE public.alumni (
     id integer NOT NULL,
-    firstname character varying(255),
-    lastname character varying(255),
-    is_current boolean
+    name character varying(255),
+    "position" character varying(255),
+    company character varying(255),
+    salary character varying(255),
+    start_date date,
+    is_looking boolean,
+    linkedin character varying(255)
 );
 
 
+ALTER TABLE public.alumni OWNER TO tpl622_2;
+
 --
--- Name: students_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+-- Name: students_id_seq; Type: SEQUENCE; Schema: public; Owner: tpl622_2
 --
 
 CREATE SEQUENCE public.students_id_seq
@@ -45,40 +51,41 @@ CREATE SEQUENCE public.students_id_seq
     CACHE 1;
 
 
---
--- Name: students_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
---
-
-ALTER SEQUENCE public.students_id_seq OWNED BY public.students.id;
-
+ALTER TABLE public.students_id_seq OWNER TO tpl622_2;
 
 --
--- Name: students id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: students_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tpl622_2
 --
 
-ALTER TABLE ONLY public.students ALTER COLUMN id SET DEFAULT nextval('public.students_id_seq'::regclass);
+ALTER SEQUENCE public.students_id_seq OWNED BY public.alumni.id;
 
 
 --
--- Data for Name: students; Type: TABLE DATA; Schema: public; Owner: -
+-- Name: alumni id; Type: DEFAULT; Schema: public; Owner: tpl622_2
 --
 
-COPY public.students (id, firstname, lastname, is_current) FROM stdin;
-\.
-
-
---
--- Name: students_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.students_id_seq', 1, false);
+ALTER TABLE ONLY public.alumni ALTER COLUMN id SET DEFAULT nextval('public.students_id_seq'::regclass);
 
 
 --
--- Name: students students_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Data for Name: alumni; Type: TABLE DATA; Schema: public; Owner: tpl622_2
 --
 
-ALTER TABLE ONLY public.students
+INSERT INTO public.alumni (id, name, "position", company, salary, start_date, is_looking, linkedin) VALUES (1, 'new ', 'new', NULL, NULL, NULL, NULL, NULL);
+
+
+--
+-- Name: students_id_seq; Type: SEQUENCE SET; Schema: public; Owner: tpl622_2
+--
+
+SELECT pg_catalog.setval('public.students_id_seq', 1, true);
+
+
+--
+-- Name: alumni students_pkey; Type: CONSTRAINT; Schema: public; Owner: tpl622_2
+--
+
+ALTER TABLE ONLY public.alumni
     ADD CONSTRAINT students_pkey PRIMARY KEY (id);
 
 
