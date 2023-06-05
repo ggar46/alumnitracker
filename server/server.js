@@ -65,6 +65,7 @@ app.delete('/api/alumni/:alumnusId', async (req, res) => {
   } catch (e) {
     return res.status(400).json({ e });
   }
+  return res.end();
 });
 
 
