@@ -13,12 +13,12 @@ app.get('/', (req, res) => {
   res.json({ message: 'This is our template ExpressJS with React-Vite' });
 });
 
-app.get('/api/students', async (req, res) => {
+app.get('/api/alumni', async (req, res) => {
   try {
-    const { rows: students } = await db.query('SELECT * FROM students');
-    res.send(students);
+    const { rows: alumni } = await db.query('SELECT * FROM alumni ORDER BY id ASC');
+    res.send(alumni);
   } catch (e) {
-    return res.status(400).json({ e });
+    return res.status(400).send(String(e));
   }
 });
 
