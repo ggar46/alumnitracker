@@ -60,10 +60,7 @@ app.put('/api/alumni/:alumnusId', async (req, res) =>{
 app.delete('/api/alumni/:alumnusId', async (req, res) => {
   const id = parseInt(req.params.alumnusId);
   try {
-    const studentId = req.params.studentId;
-    await db.query('DELETE FROM students WHERE id=$1', [studentId]);
-    console.log("From the delete request-url", studentId);
-    res.status(200).end();
+    await db.query("DELETE FROM alumni WHERE id = $1", [id]);
   } catch (e) {
     return res.status(400).json({ e });
   }
