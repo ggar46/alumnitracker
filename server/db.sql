@@ -40,6 +40,20 @@ CREATE TABLE public.alumni (
 ALTER TABLE public.alumni OWNER TO tpl622_2;
 
 --
+-- Name: alumni_id_seq; Type: SEQUENCE; Schema: public; Owner: tpl622_2
+--
+
+ALTER TABLE public.alumni ALTER COLUMN id ADD GENERATED ALWAYS AS IDENTITY (
+    SEQUENCE NAME public.alumni_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1
+);
+
+
+--
 -- Name: students_id_seq; Type: SEQUENCE; Schema: public; Owner: tpl622_2
 --
 
@@ -62,17 +76,17 @@ ALTER SEQUENCE public.students_id_seq OWNED BY public.alumni.id;
 
 
 --
--- Name: alumni id; Type: DEFAULT; Schema: public; Owner: tpl622_2
---
-
-ALTER TABLE ONLY public.alumni ALTER COLUMN id SET DEFAULT nextval('public.students_id_seq'::regclass);
-
-
---
 -- Data for Name: alumni; Type: TABLE DATA; Schema: public; Owner: tpl622_2
 --
 
-INSERT INTO public.alumni (id, name, "position", company, salary, start_date, is_looking, linkedin, is_converted) VALUES (1, 'new ', 'new', NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO public.alumni (id, name, "position", company, salary, start_date, is_looking, linkedin, is_converted) OVERRIDING SYSTEM VALUE VALUES (1, 'new ', 'new', NULL, NULL, NULL, NULL, NULL, NULL);
+
+
+--
+-- Name: alumni_id_seq; Type: SEQUENCE SET; Schema: public; Owner: tpl622_2
+--
+
+SELECT pg_catalog.setval('public.alumni_id_seq', 1, false);
 
 
 --
