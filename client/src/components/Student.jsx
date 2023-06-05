@@ -17,12 +17,12 @@ const Student = ({alumnus, toUpdate, toDelete}) => {
         <Card>
             <Card.Body>
             <Card.Title>{alumnus.name} </Card.Title>
-            <p> {alumnus.position} </p>
-            <p> {alumnus.company} </p>
-            <p> {alumnus.salary} </p>
-            <p> {alumnus.start_date} </p>
+            <p> Job Title: {alumnus.position} </p>
+            <p> Company: {alumnus.company} </p>
+            <p> Current Salary: {alumnus.salary} </p>
+            <p> Start Date: {alumnus.start_date} </p>
             <p> Open to work? : {alumnus.is_looking} </p>
-            <p> {alumnus.linkedin} </p>
+            <p> LinkedIn : {alumnus.linkedin} </p>
             <p> Placement Converted? : {alumnus.is_converted} </p>
             <Button variant="outline-danger" onClick={()=>{onDelete(alumnus)}} style={{padding: '0.6em', marginRight:'0.9em'}}><ioicons.IoTrash/></Button>
             <Button variant="outline-info" onClick={()=>{onUpdate(alumnus)}} style={{padding: '0.6em'}}> <ioicons.IoSync/></Button>
