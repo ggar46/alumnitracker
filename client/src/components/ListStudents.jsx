@@ -57,7 +57,7 @@ const ListStudents = () => {
   return (
     <div className="mybody">
       <div className="list-students">
-        <h2>Techtonica Participants </h2>
+        <h2>Techtonica Alumni </h2>
         {/* This is placeholder text for the student cards for css planning 
             <p>This is where the mapped student cards will go</p>
             <ul>
