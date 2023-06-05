@@ -58,6 +58,7 @@ app.put('/api/alumni/:alumnusId', async (req, res) =>{
 })
 
 app.delete('/api/alumni/:alumnusId', async (req, res) => {
+  const id = parseInt(req.params.alumnusId);
   try {
     const studentId = req.params.studentId;
     await db.query('DELETE FROM students WHERE id=$1', [studentId]);
