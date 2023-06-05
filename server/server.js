@@ -22,22 +22,14 @@ app.get('/api/alumni', async (req, res) => {
   }
 });
 
-app.post('/api/students', async (req, res) => {
+app.post('/api/alumni', async (req, res) => {
   try {
-    const newStudent = {
-      firstname: req.body.firstname,
-      lastname: req.body.lastname,
-      iscurrent: req.body.iscurrent
-    };
     const result = await db.query(
-      'INSERT INTO students(firstname, lastname, is_current) VALUES($1, $2, $3) RETURNING *',
-      [newStudent.firstname, newStudent.lastname, newStudent.iscurrent],
+      "INSERT INTO alumni(name, position, company, salary, start_date, is_looking, linkedin) VALUES($1, $2, $3, $4, $5, $6, $7)",
+      [req.body.name, req.body.position, req.body.company, req.body.salary, req.body.start_date, req.body.is_looking, req.body.linkedin],
     );
-    console.log(result.rows[0]);
-    res.json(result.rows[0]);
   } catch (e) {
-      console.log(e);
-      return res.status(400).json({ e });
+    return res.status(400).json({ e });
   }
 });
 
