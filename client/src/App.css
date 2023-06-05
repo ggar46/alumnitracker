@@ -1,7 +1,8 @@
 .App {
   min-height: 100vh;
-  background-color: rgb(238, 232, 232);
+  background-color: #0093B5;
   margin: 5px;
+  
 }
 
 .mybody {
@@ -17,6 +18,7 @@ a.navbar-brand {
 .nav-link {
   color: white !important;
   margin-left: 5em;
+  font-family: "lato", helvetica, sans-serif;
 }
 
 .list-students {
@@ -27,6 +29,14 @@ a.navbar-brand {
 
 ul {
   list-style-type: none;
+}
+
+li {
+  background-color: white;
+  padding: 2px;
+  margin: 2px;
+  border-radius: 5px;
+  border: #16C1F3 3px solid;
 }
 
 
@@ -49,6 +59,7 @@ input[type=text] {
 
 button.btn.btn-primary {
   margin-top: 25px;
+  
 }
 
 .myicon {
@@ -71,3 +82,5 @@ button.btn.btn-primary {
   margin-left: 2em;
   margin-right: 2em;
 }
+
+
