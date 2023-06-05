@@ -17,8 +17,8 @@ const Student = ({alumnus, toUpdate, toDelete}) => {
         <Card>
             <Card.Body>
             <Card.Title>{alumnus.name} </Card.Title>
-            <Button variant="outline-danger" onClick={()=>{onDelete(student)}} style={{padding: '0.6em', marginRight:'0.9em'}}><ioicons.IoTrash/></Button>
-            <Button variant="outline-info" onClick={()=>{onUpdate(student)}} style={{padding: '0.6em'}}> <ioicons.IoSync/></Button>
+            <Button variant="outline-danger" onClick={()=>{onDelete(alumnus)}} style={{padding: '0.6em', marginRight:'0.9em'}}><ioicons.IoTrash/></Button>
+            <Button variant="outline-info" onClick={()=>{onUpdate(alumnus)}} style={{padding: '0.6em'}}> <ioicons.IoSync/></Button>
             </Card.Body>
         </Card>
     )
