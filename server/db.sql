@@ -82,11 +82,11 @@ SELECT pg_catalog.setval('public.students_id_seq', 1, true);
 
 
 --
--- Name: alumni students_pkey; Type: CONSTRAINT; Schema: public; Owner: tpl622_2
+-- Name: alumni alumni_pkey; Type: CONSTRAINT; Schema: public; Owner: tpl622_2
 --
 
 ALTER TABLE ONLY public.alumni
-    ADD CONSTRAINT students_pkey PRIMARY KEY (id);
+    ADD CONSTRAINT alumni_pkey PRIMARY KEY (id);
 
 
 --
