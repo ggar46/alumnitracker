@@ -28,6 +28,17 @@ app.post('/api/alumni', async (req, res) => {
       "INSERT INTO alumni(name, position, company, salary, start_date, is_looking, linkedin) VALUES($1, $2, $3, $4, $5, $6, $7)",
       [req.body.name, req.body.position, req.body.company, req.body.salary, req.body.start_date, req.body.is_looking, req.body.linkedin],
     );
+    const returnObj = {
+      id: result.rows[0].id,
+      name: req.body.name,
+      position: req.body.position,
+      company: req.body.company,
+      salary: req.body.salary,
+      start_date: req.body.start_date,
+      is_looking: req.body.is_looking,
+      linkedin: req.body.linkedin
+    }
+    return res.status(200).json(returnObj);
   } catch (e) {
     return res.status(400).json({ e });
   }
