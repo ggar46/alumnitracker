@@ -128,3 +128,15 @@ Server runs on http://localhost:8080 and client on http://localhost:5173
 
 ## User Flow
 
+1. Navigate to "New Alumni Job Status" form
+
+2. Fill out the provided form with the following information
+
+3. Click "submit" to save job status information
+
+4. If an edit is needed, navigate to the "edit" icon in each card and click
+
+5. The form should display saved alumni information. Make changes and click "Update" to save changes
+
+
+
