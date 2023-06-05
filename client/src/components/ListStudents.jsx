@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import * as ioicons from "react-icons/io5";
 import MyForm from "./Form";
-import Student from "./Student";
+import Alumnus from "./Alumnus";
 
 const ListStudents = () => {
   // this is my original state with an array of students
