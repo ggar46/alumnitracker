@@ -4,7 +4,7 @@ import MyForm from "./Form";
 import Alumnus from "./Alumnus";
 
 const ListStudents = () => {
-  // this is my original state with an array of students
+  // this is my original state with an array of alumni from get request
   const [students, setStudents] = useState([]);
 
   //this is the state needed for the UpdateRequest
@@ -12,10 +12,10 @@ const ListStudents = () => {
 
   const loadStudents = () => {
     // A function to fetch the list of students that will be load anytime that list change
-    fetch("http://localhost:8080/api/students")
+    fetch("http://localhost:8080/api/alumni")
       .then((response) => response.json())
-      .then((students) => {
-        setStudents(students);
+      .then((alumni) => {
+        setStudents(alumni);
       });
   };
 
