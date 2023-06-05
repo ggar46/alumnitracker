@@ -32,7 +32,8 @@ CREATE TABLE public.alumni (
     salary character varying(255),
     start_date date,
     is_looking boolean,
-    linkedin character varying(255)
+    linkedin character varying(255),
+    is_converted boolean
 );
 
 
@@ -71,7 +72,7 @@ ALTER TABLE ONLY public.alumni ALTER COLUMN id SET DEFAULT nextval('public.stude
 -- Data for Name: alumni; Type: TABLE DATA; Schema: public; Owner: tpl622_2
 --
 
-INSERT INTO public.alumni (id, name, "position", company, salary, start_date, is_looking, linkedin) VALUES (1, 'new ', 'new', NULL, NULL, NULL, NULL, NULL);
+INSERT INTO public.alumni (id, name, "position", company, salary, start_date, is_looking, linkedin, is_converted) VALUES (1, 'new ', 'new', NULL, NULL, NULL, NULL, NULL, NULL);
 
 
 --
@@ -82,11 +83,11 @@ SELECT pg_catalog.setval('public.students_id_seq', 1, true);
 
 
 --
--- Name: alumni students_pkey; Type: CONSTRAINT; Schema: public; Owner: tpl622_2
+-- Name: alumni alumni_pkey; Type: CONSTRAINT; Schema: public; Owner: tpl622_2
 --
 
 ALTER TABLE ONLY public.alumni
-    ADD CONSTRAINT students_pkey PRIMARY KEY (id);
+    ADD CONSTRAINT alumni_pkey PRIMARY KEY (id);
 
 
 --
