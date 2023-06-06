@@ -126,6 +126,7 @@ form {
   opacity: 90%;
   background-color: white;
   height: 40vh;
+  border-radius: 5px;
 }
 
 input[type=text] {
