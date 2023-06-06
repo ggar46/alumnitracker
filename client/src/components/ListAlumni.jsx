@@ -60,11 +60,11 @@ const ListAlumni = () => {
                 <li>two</li>
                 <li>three</li>
             </ul> */}
-        {/* Commented this out in order to be able to view the rest of the page successfully<ul>
+            <ul>
                 {alumni.map((alumnus) => {
                     return <li key={alumnus.id}> <Alumnus alumnus={alumnus} toDelete={onDelete} toUpdate={onUpdate} /></li>
                 })}
-            </ul> */}
+            </ul>
       </div>
       <MyForm
         key={editingAlumnus ? editingAlumnus.id : null}
