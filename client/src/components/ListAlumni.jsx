@@ -43,11 +43,20 @@ const ListAlumni = () => {
       <div className="list-students">
         <h2>Alumni List </h2>
         <div className="scrollable-list">
-        <ul>
-          {alumni.map((alumnus) => {
-            return <li key={alumnus.id}> <Alumnus alumnus={alumnus} toDelete={onDelete} toUpdate={onUpdate} /></li>
-          })}
-        </ul>
+          <ul>
+            {alumni.map((alumnus) => {
+              return (
+                <li key={alumnus.id}>
+                  {" "}
+                  <Alumnus
+                    alumnus={alumnus}
+                    toDelete={onDelete}
+                    toUpdate={onUpdate}
+                  />
+                </li>
+              );
+            })}
+          </ul>
         </div>
       </div>
       <MyForm
