@@ -102,6 +102,7 @@ a.navbar-brand {
 .list-students {
   text-align: center;
   padding: 2em;
+  width: 25vw;
 }
 
 ul {
@@ -166,5 +167,5 @@ button.btn.btn-primary {
 
 .scrollable-list {
   overflow: auto;
-  height: 100vh;
+  height: 75vh;
 }
