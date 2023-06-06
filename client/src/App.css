@@ -50,6 +50,13 @@ h1 {
   font-size: 4em;
   letter-spacing: 4px;
 }
+h2 {
+  color: white;
+  text-shadow: 2px 2px 5px  #05556D;
+  font-size: 4em;
+  letter-spacing: 4px;
+  padding-bottom: .5em;
+}
 
 a {
   color: #0093b5;
@@ -68,10 +75,10 @@ a {
 
 .mybody {
   display: flex;
-  gap: 3em;
+  justify-content: center;
+  gap: 7em;
   padding: 7em;
   position: center;
-  background-color: #16C1F3;
   background-image: url('/Users/tpl622_1/code/alumnitracker/client/src/assets/background.png');
   background-size: 100%;
   background-repeat: no-repeat;
@@ -94,7 +101,7 @@ a.navbar-brand {
 
 .list-students {
   text-align: center;
-  margin-top: 25px;
+  padding: 2em;
 }
 
 ul {
@@ -103,10 +110,10 @@ ul {
 
 li {
   background-color: white;
-  padding: 2px;
+  padding: 3px;
   margin: 2px;
   border-radius: 5px;
-  border: #16C1F3 3px solid;
+  border: #0093B5 3px solid;
   opacity: 90%;
 }
 
