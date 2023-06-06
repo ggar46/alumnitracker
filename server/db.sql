@@ -21,7 +21,7 @@ SET default_tablespace = '';
 SET default_table_access_method = heap;
 
 --
--- Name: alumni; Type: TABLE; Schema: public; Owner: tpl622_2
+-- Name: alumni; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.alumni (
@@ -37,10 +37,8 @@ CREATE TABLE public.alumni (
 );
 
 
-ALTER TABLE public.alumni OWNER TO tpl622_2;
-
 --
--- Name: alumni_id_seq; Type: SEQUENCE; Schema: public; Owner: tpl622_2
+-- Name: alumni_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 ALTER TABLE public.alumni ALTER COLUMN id ADD GENERATED ALWAYS AS IDENTITY (
@@ -54,7 +52,7 @@ ALTER TABLE public.alumni ALTER COLUMN id ADD GENERATED ALWAYS AS IDENTITY (
 
 
 --
--- Name: students_id_seq; Type: SEQUENCE; Schema: public; Owner: tpl622_2
+-- Name: students_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.students_id_seq
@@ -66,38 +64,36 @@ CREATE SEQUENCE public.students_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.students_id_seq OWNER TO tpl622_2;
-
 --
--- Name: students_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tpl622_2
+-- Name: students_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
 ALTER SEQUENCE public.students_id_seq OWNED BY public.alumni.id;
 
 
 --
--- Data for Name: alumni; Type: TABLE DATA; Schema: public; Owner: tpl622_2
+-- Data for Name: alumni; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 INSERT INTO public.alumni (id, name, "position", company, salary, start_date, is_looking, linkedin, is_converted) OVERRIDING SYSTEM VALUE VALUES (1, 'Dana', 'job', 'company', 'money', '2023-09-08', false, 'profile', true);
 
 
 --
--- Name: alumni_id_seq; Type: SEQUENCE SET; Schema: public; Owner: tpl622_2
+-- Name: alumni_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
 SELECT pg_catalog.setval('public.alumni_id_seq', 2, true);
 
 
 --
--- Name: students_id_seq; Type: SEQUENCE SET; Schema: public; Owner: tpl622_2
+-- Name: students_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
 SELECT pg_catalog.setval('public.students_id_seq', 1, true);
 
 
 --
--- Name: alumni alumni_pkey; Type: CONSTRAINT; Schema: public; Owner: tpl622_2
+-- Name: alumni alumni_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.alumni
