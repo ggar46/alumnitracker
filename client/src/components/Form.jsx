@@ -167,6 +167,20 @@ const MyForm = ({ onSaveAlumnus, editingAlumnus, onUpdateAlumnus }) => {
       </Form.Group>
 
       <Form.Group>
+        <Form.Label>LinkedIn</Form.Label>
+        <input
+          type="text"
+          id="add-user-linkedin"
+          placeholder="LinkedIn"
+          required
+          value={alumnus.linkedin}
+          onChange={handleLinkedinChange}
+        />
+      </Form.Group>
+
+      <p></p>
+
+      <Form.Group>
         <Form.Label>Start Date</Form.Label>
         <input
           type="date"
@@ -193,18 +207,6 @@ const MyForm = ({ onSaveAlumnus, editingAlumnus, onUpdateAlumnus }) => {
           checked={alumnus.is_converted}
           onChange={handleConvertedChange}
           label={`Have you been converted?`}
-        />
-      </Form.Group>
-
-      <Form.Group>
-        <Form.Label>LinkedIn</Form.Label>
-        <input
-          type="text"
-          id="add-user-linkedin"
-          placeholder="LinkedIn"
-          required
-          value={alumnus.linkedin}
-          onChange={handleLinkedinChange}
         />
       </Form.Group>
 
