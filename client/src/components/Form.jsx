@@ -47,9 +47,15 @@ const MyForm = ({ onSaveAlumnus, editingAlumnus, onUpdateAlumnus }) => {
   };
 
   const handleLinkedinChange = (event) => {
-    const linkedin = event.target.checked;
+    const linkedin = event.target.value;
     //console.log(iscurrent);
     setAlumnus((alumnus) => ({ ...alumnus, linkedin }));
+  };
+
+  const handleConvertedChange = (event) => {
+    const is_converted = event.target.checked;
+    //console.log(iscurrent);
+    setAlumnus((alumnus) => ({ ...alumnus, is_converted }));
   };
 
   const clearForm = () => {
@@ -60,6 +66,7 @@ const MyForm = ({ onSaveAlumnus, editingAlumnus, onUpdateAlumnus }) => {
       salary: "",
       date: "",
       is_looking: false,
+      is_converted: false,
     });
   };
 
@@ -188,6 +195,18 @@ const MyForm = ({ onSaveAlumnus, editingAlumnus, onUpdateAlumnus }) => {
           required
           value={alumnus.linkedin}
           onChange={handleLinkedinChange}
+        />
+      </Form.Group>
+
+      <Form.Group>
+        <Form.Label>Is Converted</Form.Label>
+        <input
+          type="text"
+          id="add-user-converted"
+          placeholder="Have You been converted?"
+          required
+          value={alumnus.is_converted}
+          onChange={handleConvertedChange}
         />
       </Form.Group>
 
