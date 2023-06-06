@@ -1,57 +1,52 @@
 import React, { useState, useEffect } from "react";
 import * as ioicons from "react-icons/io5";
 import MyForm from "./Form";
-import Student from "./Student";
+import Alumnus from "./Alumnus";
 
 const ListStudents = () => {
-  // this is my original state with an array of students
-  const [students, setStudents] = useState([]);
+  // this is my original state with an array of alumni from get request
+  const [alumni, setAlumni] = useState([]);
 
   //this is the state needed for the UpdateRequest
-  const [editingStudent, setEditingStudent] = useState(null);
+  const [editingAlumnus, setEditingAlumnus] = useState(null);
 
-  const loadStudents = () => {
-    // A function to fetch the list of students that will be load anytime that list change
-    fetch("http://localhost:8080/api/students")
+  const loadAlumni = () => {
+    // A function to fetch the list of alumni from db that will be load anytime that list change
+    fetch("http://localhost:8080/api/alumni")
       .then((response) => response.json())
-      .then((students) => {
-        setStudents(students);
+      .then((alumni) => {
+        setAlumni(alumni);
       });
   };
 
   useEffect(() => {
-    loadStudents();
-  }, [students]);
+    loadAlumni();
+  }, [alumni]);
 
-  const onSaveStudent = (newStudent) => {
-    //console.log(newStudent, "From the parent - List of Students");
-    setStudents((students) => [...students, newStudent]);
+  const onSaveAlumnus = (newAlumnus) => {
+    setAlumni((alumni) => [...alumni, newAlumnus]);
   };
 
-  //A function to control the update in the parent (student component)
-  const updateStudent = (savedStudent) => {
-    // console.log("Line 29 savedStudent", savedStudent);
-    // This function should update the whole list of students -
-    loadStudents();
+  //A function to control the update in the parent (card component)
+  const updateAlumnus = (savedAlumnus) => {
+    loadAlumni();
   };
 
   //A function to handle the Delete funtionality
-  const onDelete = (student) => {
-    //console.log(student, "delete method")
-    return fetch(`http://localhost:8080/api/students/${student.id}`, {
+  const onDelete = (alumnus) => {
+    return fetch(`http://localhost:8080/api/alumni/${alumnus.id}`, {
       method: "DELETE",
     }).then((response) => {
       //console.log(response);
       if (response.ok) {
-        loadStudents();
+        loadAlumni();
       }
     });
   };
 
   //A function to handle the Update functionality
-  const onUpdate = (toUpdateStudent) => {
-    //console.log(toUpdateStudent);
-    setEditingStudent(toUpdateStudent);
+  const onUpdate = (toUpdateAlumnus) => {
+    setEditingAlumnus(toUpdateAlumnus);
   };
 
   return (
@@ -59,26 +54,26 @@ const ListStudents = () => {
       <div className="list-students">
         <h2>Techtonica Alumni </h2>
         {/* This is placeholder text for the student cards for css planning 
-            <p>This is where the mapped student cards will go</p>
+            <p>This is where the mapped cards will go</p>
             <ul>
                 <li>one</li>
                 <li>two</li>
                 <li>three</li>
             </ul> */}
         {/* Commented this out in order to be able to view the rest of the page successfully<ul>
-                {students.map((student) => {
-                    return <li key={student.id}> <Student student={student} toDelete={onDelete} toUpdate={onUpdate} /></li>
+                {alumni.map((alumnus) => {
+                    return <li key={alumnus.id}> <Alumnus alumnus={alumnus} toDelete={onDelete} toUpdate={onUpdate} /></li>
                 })}
             </ul> */}
       </div>
       <MyForm
-        key={editingStudent ? editingStudent.id : null}
-        onSaveStudent={onSaveStudent}
-        editingStudent={editingStudent}
-        onUpdateStudent={updateStudent}
+        key={editingAlumnus ? editingAlumnus.id : null}
+        onSaveAlumnus={onSaveAlumnus}
+        editingAlumnus={editingAlumnus}
+        onUpdateAlumnus={updateAlumnus}
       />
     </div>
   );
 };
 
-export default ListStudents;
+export default ListAlumnus;
