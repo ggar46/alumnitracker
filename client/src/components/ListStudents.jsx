@@ -24,20 +24,16 @@ const ListStudents = () => {
   }, [alumni]);
 
   const onSaveStudent = (newAlumnus) => {
-    //console.log(newStudent, "From the parent - List of Students");
     setAlumni((alumni) => [...alumni, newAlumnus]);
   };
 
-  //A function to control the update in the parent (student component)
+  //A function to control the update in the parent (card component)
   const updateAlumnus = (savedAlumnus) => {
-    // console.log("Line 29 savedStudent", savedStudent);
-    // This function should update the whole list of students -
     loadAlumni();
   };
 
   //A function to handle the Delete funtionality
   const onDelete = (alumnus) => {
-    //console.log(student, "delete method")
     return fetch(`http://localhost:8080/api/alumni/${alumnus.id}`, {
       method: "DELETE",
     }).then((response) => {
@@ -67,7 +63,7 @@ const ListStudents = () => {
             </ul> */}
         {/* Commented this out in order to be able to view the rest of the page successfully<ul>
                 {alumni.map((alumnus) => {
-                    return <li key={alumnus.id}> <Student alumnus={alumnus} toDelete={onDelete} toUpdate={onUpdate} /></li>
+                    return <li key={alumnus.id}> <Alumnus alumnus={alumnus} toDelete={onDelete} toUpdate={onUpdate} /></li>
                 })}
             </ul> */}
       </div>
