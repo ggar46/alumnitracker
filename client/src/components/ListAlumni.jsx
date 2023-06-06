@@ -60,11 +60,13 @@ const ListAlumni = () => {
                 <li>two</li>
                 <li>three</li>
             </ul> */}
+            <div className="scrollable-list">
             <ul>
                 {alumni.map((alumnus) => {
                     return <li key={alumnus.id}> <Alumnus alumnus={alumnus} toDelete={onDelete} toUpdate={onUpdate} /></li>
                 })}
             </ul>
+            </div>
       </div>
       <MyForm
         key={editingAlumnus ? editingAlumnus.id : null}
