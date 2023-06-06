@@ -79,7 +79,7 @@ a {
   gap: 7em;
   padding: 7em;
   position: center;
-  background-image: url('/Users/tpl622_1/code/alumnitracker/client/src/assets/background.png');
+  background-image: url('./assets/background.png');
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
