@@ -65,6 +65,7 @@ const MyForm = ({ onSaveAlumnus, editingAlumnus, onUpdateAlumnus }) => {
       company: "",
       salary: "",
       date: "",
+      linkedin: "",
       is_looking: false,
       is_converted: false,
     });
