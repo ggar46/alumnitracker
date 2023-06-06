@@ -52,7 +52,7 @@ const ListAlumni = () => {
   return (
     <div className="mybody">
       <div className="list-students">
-        <h2>Techtonica Alumni </h2>
+        <h2>Alumni List </h2>
         {/* This is placeholder text for the student cards for css planning 
             <p>This is where the mapped cards will go</p>
             <ul>
