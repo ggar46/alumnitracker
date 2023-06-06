@@ -60,6 +60,7 @@ const MyForm = ({ onSaveAlumnus, editingAlumnus, onUpdateAlumnus }) => {
       salary: "",
       date: "",
       is_looking: false,
+      is_converted: false,
     });
   };
 
