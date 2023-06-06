@@ -3,7 +3,7 @@ import * as ioicons from "react-icons/io5";
 import MyForm from "./Form";
 import Alumnus from "./Alumnus";
 
-const ListStudents = () => {
+const ListAlumni = () => {
   // this is my original state with an array of alumni from get request
   const [alumni, setAlumni] = useState([]);
 
@@ -76,4 +76,4 @@ const ListStudents = () => {
   );
 };
 
-export default ListAlumnus;
+export default ListAlumni;
