@@ -11,7 +11,7 @@ const ListStudents = () => {
   const [editingAlumnus, setEditingAlumnus] = useState(null);
 
   const loadAlumni = () => {
-    // A function to fetch the list of students that will be load anytime that list change
+    // A function to fetch the list of alumni from db that will be load anytime that list change
     fetch("http://localhost:8080/api/alumni")
       .then((response) => response.json())
       .then((alumni) => {
@@ -23,7 +23,7 @@ const ListStudents = () => {
     loadAlumni();
   }, [alumni]);
 
-  const onSaveStudent = (newAlumnus) => {
+  const onSaveAlumnus = (newAlumnus) => {
     setAlumni((alumni) => [...alumni, newAlumnus]);
   };
 
