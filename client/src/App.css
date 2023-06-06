@@ -174,3 +174,7 @@ button.btn.btn-primary {
   overflow: auto;
   height: 75vh;
 }
+
+#submit {
+  margin: 3em 0;
+}

@@ -215,7 +215,7 @@ const MyForm = ({ onSaveAlumnus, editingAlumnus, onUpdateAlumnus }) => {
       </Form.Group>
 
       <Form.Group>
-        <Button type="submit" variant="outline-success">
+        <Button id="submit" type="submit" variant="outline-success">
           {alumnus.id ? "Edit Alumnus" : "Add Alumnus"}
         </Button>
         {alumnus.id ? (
