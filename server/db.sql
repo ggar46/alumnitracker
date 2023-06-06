@@ -79,14 +79,14 @@ ALTER SEQUENCE public.students_id_seq OWNED BY public.alumni.id;
 -- Data for Name: alumni; Type: TABLE DATA; Schema: public; Owner: tpl622_2
 --
 
-INSERT INTO public.alumni (id, name, "position", company, salary, start_date, is_looking, linkedin, is_converted) OVERRIDING SYSTEM VALUE VALUES (1, 'new ', 'new', NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO public.alumni (id, name, "position", company, salary, start_date, is_looking, linkedin, is_converted) OVERRIDING SYSTEM VALUE VALUES (1, 'Dana', 'job', 'company', 'money', '2023-09-08', false, 'profile', true);
 
 
 --
 -- Name: alumni_id_seq; Type: SEQUENCE SET; Schema: public; Owner: tpl622_2
 --
 
-SELECT pg_catalog.setval('public.alumni_id_seq', 1, false);
+SELECT pg_catalog.setval('public.alumni_id_seq', 2, true);
 
 
 --
