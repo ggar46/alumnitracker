@@ -5,6 +5,7 @@ body {
   line-height: 1.4em;
   font-family: "lato", helvetica, sans-serif;
   
+  
 }
 
 h1,
@@ -14,7 +15,7 @@ h4,
 h5,
 h6 {
   margin: 1.5rem 0;
-  color: white;
+  color: #05556D;
   line-height: 1.3em;
   font-weight: 700;
   
@@ -56,9 +57,11 @@ a {
 }
 .App {
   min-height: 100vh;
-  background-color: #0093B5;
+  background-color: white;
   margin: 5px;
   font-family: "lato", helvetica, sans-serif;
+  color: #05556D;
+  font-weight: bold;
 
   
 }
@@ -66,11 +69,14 @@ a {
 .mybody {
   display: flex;
   gap: 3em;
-  padding: 1em;
+  padding: 7em;
+  position: center;
+  background-color: #16C1F3;
   background-image: url('/Users/tpl622_1/code/alumnitracker/client/src/assets/background.png');
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
+  background-attachment: fixed;
 }
 
 a.navbar-brand {
@@ -89,7 +95,6 @@ a.navbar-brand {
 .list-students {
   text-align: center;
   margin-top: 25px;
-  flex: 1
 }
 
 ul {
@@ -102,6 +107,7 @@ li {
   margin: 2px;
   border-radius: 5px;
   border: #16C1F3 3px solid;
+  opacity: 90%;
 }
 
 
@@ -110,7 +116,8 @@ form {
   align-items: center;
   text-align: left;
   margin-top: 3em;
-  flex: 1;
+  flex: .75;
+  opacity: 90%;
 }
 
 input[type=text] {
