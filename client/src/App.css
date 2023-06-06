@@ -3,6 +3,8 @@ body {
   box-sizing: border-box;
   font-size: 1.2em;
   line-height: 1.4em;
+  font-family: "lato", helvetica, sans-serif;
+  
 }
 
 h1,
@@ -15,6 +17,7 @@ h6 {
   color: white;
   line-height: 1.3em;
   font-weight: 700;
+  
 }
 
 h1,
@@ -55,6 +58,8 @@ a {
   min-height: 100vh;
   background-color: #0093B5;
   margin: 5px;
+  font-family: "lato", helvetica, sans-serif;
+
   
 }
 
@@ -62,6 +67,10 @@ a {
   display: flex;
   gap: 3em;
   padding: 1em;
+  background-image: url('/Users/tpl622_1/code/alumnitracker/client/src/assets/background.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 a.navbar-brand {
