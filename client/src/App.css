@@ -101,8 +101,6 @@ a.navbar-brand {
 
 .list-students {
   text-align: center;
-  padding: 2em;
-  width: 25vw;
 }
 
 ul {
@@ -128,6 +126,14 @@ form {
   opacity: 90%;
   background-color: white;
   height: 40vh;
+  border-radius: 5px;
+}
+
+.form-students {
+  padding: 0 2em; 
+  background-color: white;
+  opacity: 90%;
+  height: 100%;
 }
 
 input[type=text] {
@@ -168,4 +174,8 @@ button.btn.btn-primary {
 .scrollable-list {
   overflow: auto;
   height: 75vh;
+}
+
+#submit {
+  margin: 3em 0;
 }
