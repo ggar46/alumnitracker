@@ -21,7 +21,7 @@ const ListAlumni = () => {
 
   useEffect(() => {
     loadAlumni();
-  }, [alumni]);
+  }, []);
 
   const onSaveAlumnus = (newAlumnus) => {
     setAlumni((alumni) => [...alumni, newAlumnus]);
