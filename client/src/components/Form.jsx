@@ -181,7 +181,8 @@ const MyForm = ({ onSaveAlumnus, editingAlumnus, onUpdateAlumnus }) => {
       <p></p>
 
       <Form.Group>
-        <Form.Label>Start Date</Form.Label>
+        <Form.Label>Start Date</Form.Label> <p></p>
+        {"     "}
         <input
           type="date"
           id="add-user-date"
