@@ -54,7 +54,7 @@ const ListStudents = () => {
       <div className="list-students">
         <h2>Techtonica Alumni </h2>
         {/* This is placeholder text for the student cards for css planning 
-            <p>This is where the mapped student cards will go</p>
+            <p>This is where the mapped cards will go</p>
             <ul>
                 <li>one</li>
                 <li>two</li>
