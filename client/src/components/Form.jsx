@@ -201,7 +201,7 @@ const MyForm = ({ onSaveAlumnus, editingAlumnus, onUpdateAlumnus }) => {
         id={`is_looking`}
         checked={alumnus.is_looking}
         onChange={handleCheckChange}
-        label={`Are you looking for work and opportunties?`}
+        label={`I'm currently looking for work and opportunties`}
       />
 
       <Form.Group>
@@ -210,7 +210,7 @@ const MyForm = ({ onSaveAlumnus, editingAlumnus, onUpdateAlumnus }) => {
           id={`is_converted`}
           checked={alumnus.is_converted}
           onChange={handleConvertedChange}
-          label={`Have you been converted?`}
+          label={`I was converted from my Techtonica placement`}
         />
       </Form.Group>
 
